@@ -17,3 +17,60 @@ Supporting Package/Plugins/Server/Provider Resources used in Project:
 **High Level Diagram:**
 
 <img width="934" height="560" alt="image" src="https://github.com/user-attachments/assets/adb015d5-0698-488f-ac1a-34c632786ace" />
+
+**High Level Tasks/Steps:**
+
+
+####### TERRAFORM-ANSIBLE MASTER MACHINE ########
+
+sudo yum update -y
+
+python3 --version  //python3 already installed for ansible
+
+sudo yum install ansible -y
+
+ansible --version
+
+which ansible
+
+which python3   -> /usr/bin/python3
+
+sudo yum list java*  -> java-21-amazon-corretto.x86_64
+
+sudo yum install java-21-amazon-corretto.x86_64 -y
+
+Install Terraform on Amazon Linux
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+
+Create a Playbook to install Java and then Tomcat-9 on Machine to be provisioned by Terraform:
+
+vi tomcat-playbook.yaml
+
+Create an ansible.cfg file
+vi ansible.cfg
+
+Create a Terraform Configuration file to Provision Infrastructure and related resources in AWS Cloud: terraform.tf
+vi terraform.tf
+
+Now run terraform init command:
+terraform init
+
+terraform validate
+
+terraform plan
+
+terraform apply -auto-approve
+
+inventory created at terraform-ansible machine location:
+/home/ec2-user/terraform-ansible-demo/myhosts
+
+Private key file: sl-key.pem got generated at terraform-ansible machine location:
+/home/ec2-user/terraform-ansible-demo/sl-key.pem
+
+Now remove/delete all the provision resources in AWS Cloud Infrastructure:
+
+terraform destroy -auto-approve
