@@ -1,4 +1,4 @@
-# Declare variable for multi-instances name
+# Declare variable for multi-instances name / Multiple machines
 
 variable "instance_name" {
   type = list(string)
