@@ -8,7 +8,7 @@ They want to have an automated provisioned infrastructure through which they can
 **Major Tools Used in This Project:**
 - Ansible: Ansible automates IT tasks, streamlining configuration management, application deployment, and orchestration. It uses simple, human-readable YAML files called playbooks.
 - Terraform: Terraform automates the provisioning and management of infrastructure using declarative configuration files. It supports multiple cloud providers and services, enabling consistent infrastructure deployment and scaling.
-- 
+  
 **Supporting Package/Plugins/Server/Provider Resources used in Project:**
   
 - AWS: It is a comprehensive cloud computing platform providing on demand compute power, database storage, content delivery, and other functionalities to help businesses scale and grow.
