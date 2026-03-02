@@ -7,16 +7,20 @@ They want to have an automated provisioned infrastructure through which they can
 **Major Tools Used in This Project:**
 - Ansible: Ansible automates IT tasks, streamlining configuration management, application deployment, and orchestration. It uses simple, human-readable YAML files called playbooks.
 - Terraform: Terraform automates the provisioning and management of infrastructure using declarative configuration files. It supports multiple cloud providers and services, enabling consistent infrastructure deployment and scaling.
-Supporting Package/Plugins/Server/Provider Resources used in Project:
+- 
+**Supporting Package/Plugins/Server/Provider Resources used in Project:**
+  
 - AWS: It is a comprehensive cloud computing platform providing on demand compute power, database storage, content delivery, and other functionalities to help businesses scale and grow.
 - AWS EC2 (Amazon Linux 2023): 5 VMs (5 EC2 Instances)
 - AWS VPC, Subnets, Route Table, Security Group, Key Pair
 - Java: java-21-amazon-corretto.x86_64 (as task of Ansible Playbook)
 - Apache Tomcat-9 Server (as task of Ansible Playbook)
   
-**High Level Diagram:**
+**High Level Project Diagram:**
 
 <img width="934" height="560" alt="image" src="https://github.com/user-attachments/assets/adb015d5-0698-488f-ac1a-34c632786ace" />
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 **High Level Tasks/Steps:**
 
@@ -74,3 +78,33 @@ Private key file: sl-key.pem got generated at terraform-ansible machine location
 Now remove/delete all the provision resources in AWS Cloud Infrastructure:
 
 terraform destroy -auto-approve
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+# RESULT Screenshots
+
+terraform apply – execution completed successfully: 
+<img width="954" height="397" alt="image" src="https://github.com/user-attachments/assets/3a2acde3-02cf-4a1f-8493-cdca7cd7056b" />
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="942" height="565" alt="image" src="https://github.com/user-attachments/assets/ded2b4de-0d1b-493e-9125-f25c74f2e4d0" />
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Playbook Task: Tomcat-9 server was installed and started successfully on all the 5 VMs (5 EC2 Instances):
+<img width="920" height="577" alt="image" src="https://github.com/user-attachments/assets/24982bb2-8833-4d2f-b983-e4f4380e5051" />
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="933" height="500" alt="image" src="https://github.com/user-attachments/assets/04b308cd-f057-4889-af94-a1ae6ddea56d" />
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Now destroy/delete the provisioned resources in the AWS Cloud Infrastructure. 
+
+-Run the command: 
+
+terraform destroy -auto-approve
+
+**The Project gets Completed!**
