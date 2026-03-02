@@ -1,5 +1,6 @@
 # ConfigurationManagement_Ansible_Terraform
-This Project automate the provisioning of infrastructure and configuring it with integration of Terraform and Ansible.
+
+**Objective:** This Project automate the provisioning of infrastructure and configuring it with integration of Terraform and Ansible.
 
 **Real-time scenario:** Royal Hotel is a globally leading chain of hotels. Recently, as part of scaling up operations, they aim to automate every operation in the hotel. For this, multiple applications are onboarded within all the hotel’s main server. To keep these applications up and running and to scale them appropriately, they need fully managed virtual machines on AWS.
 They want to have an automated provisioned infrastructure through which they can create a new developer VM and manage some developer configurations on that server.
