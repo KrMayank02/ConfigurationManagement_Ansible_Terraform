@@ -28,89 +28,16 @@ They want to have an automated provisioned infrastructure through which they can
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-**High Level Tasks/Steps:**
+## High Level Tasks/Steps:
+
+- Install Ansible and Terraform on Master machine of Linux distribution.
+- Create a directory as “terraform-multi-instances” and create these files: tomcat-playbook.yaml, ansible.cfg & terraform.tf
+- Run the terraform workflow commands in sequence.
+- Destroy/delete the provisioned resources in the AWS Cloud Infrastructure.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 
-####### TERRAFORM-ANSIBLE MASTER MACHINE ########
-
-sudo yum update -y
-
-python3 --version  //python3 already installed for ansible
-
-sudo yum install ansible -y
-
-ansible --version
-
-which ansible
-
-which python3   -> /usr/bin/python3
-
-sudo yum list java*  -> java-21-amazon-corretto.x86_64
-
-sudo yum install java-21-amazon-corretto.x86_64 -y
-
-Install Terraform on Amazon Linux
-
-sudo yum install -y yum-utils shadow-utils
-sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-sudo yum -y install terraform
+# Output Result Screenshots:
 
 
-Create a Playbook to install Java and then Tomcat-9 on Machine to be provisioned by Terraform:
-
-vi tomcat-playbook.yaml
-
-Create an ansible.cfg file
-vi ansible.cfg
-
-Create a Terraform Configuration file to Provision Infrastructure and related resources in AWS Cloud: terraform.tf
-vi terraform.tf
-
-Now run terraform init command:
-terraform init
-
-terraform validate
-
-terraform plan
-
-terraform apply -auto-approve
-
-inventory created at terraform-ansible machine location:
-/home/ec2-user/terraform-ansible-demo/myhosts
-
-Private key file: sl-key.pem got generated at terraform-ansible machine location:
-/home/ec2-user/terraform-ansible-demo/sl-key.pem
-
-Now remove/delete all the provision resources in AWS Cloud Infrastructure:
-
-terraform destroy -auto-approve
-
------------------------------------------------------------------------------------------------------------------------------------
-
-# RESULT Screenshots
-
-terraform apply – execution completed successfully: 
-<img width="954" height="397" alt="image" src="https://github.com/user-attachments/assets/3a2acde3-02cf-4a1f-8493-cdca7cd7056b" />
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-<img width="942" height="565" alt="image" src="https://github.com/user-attachments/assets/ded2b4de-0d1b-493e-9125-f25c74f2e4d0" />
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-Playbook Task: Tomcat-9 server was installed and started successfully on all the 5 VMs (5 EC2 Instances):
-<img width="920" height="577" alt="image" src="https://github.com/user-attachments/assets/24982bb2-8833-4d2f-b983-e4f4380e5051" />
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-<img width="933" height="500" alt="image" src="https://github.com/user-attachments/assets/04b308cd-f057-4889-af94-a1ae6ddea56d" />
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-Now destroy/delete the provisioned resources in the AWS Cloud Infrastructure. 
-
--Run the command: 
-
-terraform destroy -auto-approve
-
-**The Project gets Completed!**
