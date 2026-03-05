@@ -78,9 +78,6 @@ Create Terraform Configuration file “terraform.tf”
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-<img width="952" height="958" alt="image" src="https://github.com/user-attachments/assets/ee6e4803-678d-4b1e-98bb-3b1d5d292ce6" />
-
-------------------------------------------------------------------------------------------------------------------------------------
 
 <img width="909" height="803" alt="image" src="https://github.com/user-attachments/assets/7228c7df-0b3d-4295-af58-56ea78a5edae" />
 
