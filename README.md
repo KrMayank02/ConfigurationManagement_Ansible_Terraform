@@ -80,11 +80,77 @@ Create Terraform Configuration file “terraform.tf”
 
 <img width="952" height="958" alt="image" src="https://github.com/user-attachments/assets/ee6e4803-678d-4b1e-98bb-3b1d5d292ce6" />
 
+------------------------------------------------------------------------------------------------------------------------------------
 
+<img width="909" height="803" alt="image" src="https://github.com/user-attachments/assets/7228c7df-0b3d-4295-af58-56ea78a5edae" />
 
+------------------------------------------------------------------------------------------------------------------------------------
 
+Run the terraform workflow commands in sequence:
 
+- terraform init
+- terraform validate
+- terraform plan
+- terraform apply -auto-approve
 
+<img width="933" height="552" alt="image" src="https://github.com/user-attachments/assets/e7bdd604-ca57-4494-a227-cbe3bfb62d1f" />
 
+---------------------------------------------------------------------------------------------------------------------------------------
 
+<img width="955" height="491" alt="image" src="https://github.com/user-attachments/assets/e3f70bdd-19ed-454f-a30e-4f56d9a59c7d" />
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="956" height="617" alt="image" src="https://github.com/user-attachments/assets/85dc0a39-504a-4817-b999-d8462bb6b317" />
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="960" height="494" alt="image" src="https://github.com/user-attachments/assets/f1cbcb53-ce87-4a6d-aefa-48ec45f12954" />
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="954" height="397" alt="image" src="https://github.com/user-attachments/assets/096ea740-946b-4b0f-a8f9-20eadb063b3d" />
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Now navigate to AWS Cloud Infrastructure to check newly provisioned Resources:
+
+5 AWS EC2 Instances (5 VMs) created successfully – screenshot:
+
+<img width="942" height="565" alt="image" src="https://github.com/user-attachments/assets/10958b55-b01f-4428-a15e-de86c8111dfc" />
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+AWS VPC got created successfully with required CIDR, Subnet, Route table, Security group:
+
+<img width="959" height="421" alt="image" src="https://github.com/user-attachments/assets/b8682851-881f-4b43-ad21-f1ff3c4af5de" />
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="933" height="434" alt="image" src="https://github.com/user-attachments/assets/400abd52-2a1f-45b4-a8e2-33882075b239" />
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+- Playbook Task: Java-21 was installed on all 5 EC2 instances.
+- Playbook Task: Apache Tomcat-9 tar file was downloaded and extracted successfully.
+
+<img width="962" height="460" alt="image" src="https://github.com/user-attachments/assets/d1ec10db-b2d5-4cf9-bef7-0bf12190b735" />
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Playbook Task: Tomcat-9 server was installed and started successfully on all the 5 VMs (5 EC2 Instances):
+
+<img width="920" height="577" alt="image" src="https://github.com/user-attachments/assets/98bebc76-a3a2-42ef-976e-589308c79fc7" />
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Now destroy/delete the provisioned resources in the AWS Cloud Infrastructure
+
+- terraform destroy -auto-approve
+
+Command got executed successfully and all the terraform provisioned resources have been destroyed.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+**The above Project with all it's Steps, Files & Settings - automated the provisioning of infrastructure on AWS, to get fully managed Virtual Machines (multiple EC2 instances) and configuring each of the VMs to install multiple applications is met, with the integration of Terraform and Ansible.**
 
