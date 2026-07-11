@@ -15,8 +15,6 @@ locals {
 # Provider section
 
 provider "aws" {
-  access_key = "AKIAZOZQFIZZVHZ7OPGO"
-  secret_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
   region = "us-east-1"
 }
 
